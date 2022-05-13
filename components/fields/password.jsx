@@ -6,15 +6,16 @@ function PasswordField({values, errors, touched, disable}){
 
     let isError = errors.password
     let isTouched = touched.password
+    let isValid = isError && isTouched
 
     return(
         <div className="box-field">
-            <label className={isError ? 'label-error' : 'label-field'}>Senha</label>
+            <label className={isValid ? 'label-error' : 'label-field'}>Senha</label>
             <div className="field-append">
                 <Field
                     type="password"
                     name="password"
-                    className={isError ? 'field-error' : 'field'}
+                    className={isValid ? 'field-error' : 'field'}
                     disabled={disable}
                 />
                 <AiFillEye className="item-field-append-right" />

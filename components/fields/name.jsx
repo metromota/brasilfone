@@ -1,19 +1,23 @@
-import {ErrorMessage, Field} from 'formik'
+import { Field} from 'formik'
 
 function NameField({values, errors, touched, disable}){
+
+    let isError = errors.name
+    let isTouched = touched.name
+    let isInvalid = isError && isTouched
     
     return(
         <div className="box-field">
-            <label>Nome</label>
+            <label className={isInvalid ? 'label-error' : 'label-field'}>Nome</label>
             <Field
                 type="text"
                 name="name"
-                className="field"
+                className={isInvalid ? 'field-error' : 'field'}
                 disabled={disable}
             />
-            <ErrorMessage name='name'>
-                Informe um nome de usuário correto.
-            </ErrorMessage>
+            {/* <p className="alert-field-error">
+                { isError && isTouched && 'Informe um número ou e-mail correto.'}
+            </p> */}
         </div>
     )
 }

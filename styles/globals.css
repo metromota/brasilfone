@@ -37,6 +37,9 @@
 .field{
     @apply border rounded-md p-2 w-full ;
 }
+.field-tel{
+    @apply border rounded-md py-2 pr-2 w-full pl-[45%];
+}
 /* forms  */
 
 /* buttons  */
@@ -64,6 +67,12 @@
 .item-field-append-left{
     @apply absolute top-[28%] left-[10px] w-[20px] h-[20px] text-sky-900 hover:text-sky-700 cursor-pointer ;
 }
+.container-append{
+    @apply flex h-[100%] items-center relative;
+}
+.box-item-append{
+    @apply absolute top-0 left-2 flex items-center h-full;
+}
 /* append  */
 
 /* alerts  */
@@ -73,10 +82,29 @@
 .field-error{
     @apply rounded-md p-2 w-full text-red-500 border border-red-500 outline-none;
 }
+.field-tel-error{
+    @apply rounded-md py-2 pr-2 w-full text-red-500 border border-red-500 outline-none pl-[45%];
+}
 .alert-field-error{
     @apply w-full text-red-500 text-sm ;
 }
 .alert-error{
-    @apply bg-red-200 w-full text-red-500 text-sm p-2 rounded;
+    @apply bg-red-200 w-full text-red-500 text-sm p-2 rounded flex items-center;
+}
+.alert-icon-box{
+    @apply border-l-2 border-l-red-500 w-[40px] h-[40px] flex justify-center items-center;
+}
+.alert-icon{
+    @apply w-[25px] h-[25px] bg-red-500 mx-2 text-white rounded p-[2px];
 }
 /* alerts  */
+
+
+/* selects  */
+.ddi{
+    @apply h-[60%] text-xs ;
+}
+.ddi-error{
+    @apply h-[60%] text-xs text-red-500;
+}
+/* selects  */

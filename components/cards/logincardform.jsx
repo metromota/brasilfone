@@ -8,10 +8,22 @@ import login_schema from '../../schemas/login_schema'
 
 function LoginCardForm(){
     
-    let initialvalue = {
+    let initialValueForm = {
         username:'',
         password:''
     }
+
+    let renderForm = ({values, errors, touched})=>(
+        <Form>
+            <UsernameField values={values} errors={errors} touched={touched} disable={false} />
+            <PasswordField values={values} errors={errors} touched={touched} disable={false}/>  
+            { 
+                (errors.username &&  touched.username || touched.password && errors.password) &&
+                <ErrorAlert message='Usuário ou senha inserido está incorreto, tente novamente'/>
+            }
+            <Submit value="Conectar" />
+        </Form>
+    )
 
     return(
         <div className="card-form">
@@ -19,23 +31,11 @@ function LoginCardForm(){
             <h2>Conecte-se</h2>
             
             <Formik  
-            initialValues={initialvalue} 
+            initialValues={initialValueForm} 
             validationSchema={login_schema}   
             onSubmit={(values, actions)=>{ console.log(values) }}       
             >
-            {
-                ({values, errors, touched})=>(
-                    <Form>
-                        <UsernameField values={values} errors={errors} touched={touched} disable={false} />
-                        <PasswordField values={values} errors={errors} touched={touched} disable={false}/>  
-                        { 
-                            errors.username && errors.password &&  
-                            <ErrorAlert message='Usuário ou senha inserido está incorreto, tente novamente'/>
-                        }
-                        <Submit value="Conectar" />
-                    </Form>
-                )
-            }   
+                { renderForm }   
             </Formik> 
 
             <p>Ainda não é cliente Disparo Pro?</p>
