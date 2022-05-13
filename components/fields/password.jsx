@@ -4,21 +4,24 @@ import { ErrorMessage } from "formik"
 
 function PasswordField({values, errors, touched, disable}){
 
+    let isError = errors.password
+    let isTouched = touched.password
+
     return(
         <div className="box-field">
-            <label>Senha</label>
+            <label className={isError ? 'label-error' : 'label-field'}>Senha</label>
             <div className="field-append">
                 <Field
                     type="password"
                     name="password"
-                    className="field"
+                    className={isError ? 'field-error' : 'field'}
                     disabled={disable}
                 />
                 <AiFillEye className="item-field-append-right" />
             </div>
-            <ErrorMessage name='username'>
-                Informe uma senha correta.
-            </ErrorMessage>
+            {/* <p className="alert-field-error">
+                { isError && isTouched &&  'Informe uma senha correta.'}
+            </p>             */}
         </div>
     )
 

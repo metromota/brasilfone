@@ -31,7 +31,7 @@
 .box-field{
     @apply w-[100%] flex flex-col my-2; 
 }
-.box-field > label{
+.label-field{
     @apply font-medium text-sky-900;
 }
 .field{
@@ -67,7 +67,16 @@
 /* append  */
 
 /* alerts  */
+.label-error{
+    @apply font-medium text-red-500 ;
+}
+.field-error{
+    @apply rounded-md p-2 w-full text-red-500 border border-red-500 outline-none;
+}
+.alert-field-error{
+    @apply w-full text-red-500 text-sm ;
+}
 .alert-error{
-    @apply bg-red-400 w-full text-red-500 text-center text-xs;
+    @apply bg-red-200 w-full text-red-500 text-sm p-2 rounded;
 }
 /* alerts  */
