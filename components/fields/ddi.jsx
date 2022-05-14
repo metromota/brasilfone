@@ -9,17 +9,14 @@ function DDIField({values, errors, touched, disable}){
         {code:55}
     ]
 
-
     return(
         <div className="">
-           <Field 
-                as="select"
-                name='ddi'
-                className={style}
-                >
-            { ddiCountries && ddiCountries.map(
-                ({code})=> <option key={ code } value={ code }> + { code } </option> 
-            ) }
+            <Field 
+            as="select"
+            name='ddi'
+            className={style}
+            >
+                { ddiCountries && ddiCountries.map( ({ code })=> <option key={ code } value={ code }> + { code } </option> ) }
             </Field>          
         </div>
     )

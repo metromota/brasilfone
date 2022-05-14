@@ -35,12 +35,12 @@ function RegisterCardForm(){
             <Newsletter values={values} errors={errors} touched={touched} disable={false}/>
             { 
                 (
-                    errors.name && touched.name || 
-                    errors.email && touched.email || 
-                    errors.tel && touched.tel   || 
-                    errors.ddi && touched.ddi ||
-                    errors.password && touched.password || 
-                    errors.passwordconfirm && touched.passwordconfirm 
+                    (errors.name && touched.name)           ||  
+                    (errors.email && touched.email)         || 
+                    (errors.tel && touched.tel)             || 
+                    (errors.ddi && touched.ddi)             ||
+                    (errors.password && touched.password)   || 
+                    (errors.passwordconfirm && touched.passwordconfirm) 
                 ) &&
                 <ErrorAlert message='Os campos em destaque estão incorretos, tente novamente'/>
             }
@@ -54,6 +54,7 @@ function RegisterCardForm(){
             <Formik
             initialValues={initialValueForm}
             validationSchema={register_schema}
+            onSubmit={(values, actions)=>{ console.log(values)  }}
             >
                 { renderForm }
             </Formik>

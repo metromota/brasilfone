@@ -5,19 +5,21 @@ function EmailField({values, errors, touched, disable}){
     let isError = errors.email
     let isTouched = touched.email
     let isInvalid = isError && isTouched
+    let style = isInvalid ? 'field-error' : 'field'
+    let styleLabel = isInvalid ? 'label-error' : 'label-field'
 
     return(
         <div className="box-field">
-            <label className={isInvalid ? 'label-error' : 'label-field'}>Email</label>
+            <label className={styleLabel}>Email</label>
             <Field
-                type="email"
-                name="email"
-                className={isInvalid ? 'field-error' : 'field'}
-                disabled={disable}
+            type="email"
+            name="email"
+            className={style}
+            disabled={disable}
             />
             {/* <p className="alert-field-error">
                 { isError && isTouched &&  'Informe um e-mail correto.'}
-            </p>             */}
+            </p>*/}
         </div>
     )
 

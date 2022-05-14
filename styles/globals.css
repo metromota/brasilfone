@@ -8,19 +8,34 @@
     @apply w-full min-h-screen flex;
 }
 .leftside{
-    @apply hidden md:flex w-[50%] bg-[url('/assets/blue.png')] bg-center bg-no-repeat bg-cover relative flex justify-center items-center ;
+    @apply hidden w-[50%] md:flex bg-[url('/assets/blue.png')] bg-center bg-no-repeat bg-cover relative justify-center items-center ;
 }
 .rightside{
     @apply w-full md:w-[50%] bg-[url('/assets/blue.png')] bg-center bg-no-repeat bg-cover md:bg-none flex justify-center items-center;
 }
 /* containers  */
 
+/* paragraphs */
+.question{
+    @apply text-xs text-center ;
+}
+/* paragraphs */
+
+/* estructure */
+.center-content{
+    @apply flex items-center justify-center ;
+}
+/* estructure */
+
 /* logomarca */
 .container-logomarca{
     @apply absolute top-10 left-10;
 }
+.container-mobile-logomarca{
+    @apply md:hidden absolute top-[10px] w-full left-0 flex justify-center;
+}
 .logomarca{
-    @apply w-full h-auto;
+    @apply mx-auto w-full h-auto;
 }
 /* logomarca */
 

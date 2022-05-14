@@ -9,27 +9,30 @@ function PasswordField({values, errors, touched, disable}){
     let isError = errors.password
     let isTouched = touched.password
     let isInvalid = isError && isTouched
+    let styleLabel = isInvalid ? 'label-error' : 'label-field'
+    let stylePassword = isInvalid ? 'field-error' : 'field'
     let type = isHide ? 'password' : 'text'
+    let styleEye = isHide ? "item-field-append-right" : "item-field-append-right-show"
 
     let handleShowPassword = ()=> setHide(!isHide)
 
     return(
         <div className="box-field">
-            <label className={isInvalid ? 'label-error' : 'label-field'}>Senha</label>
+            <label className={styleLabel}>Senha</label>
             <div className="field-append">
                 <Field
-                    type={type}
-                    name="password"
-                    className={isInvalid ? 'field-error' : 'field'}
-                    disabled={disable}
+                type={type}
+                name="password"
+                className={stylePassword}
+                disabled={disable}
                 />
                 <AiFillEye 
-                className={isHide ? "item-field-append-right" : "item-field-append-right-show"}  
+                className={styleEye}  
                 onClick={handleShowPassword} />
             </div>
             {/* <p className="alert-field-error">
                 { isError && isTouched &&  'Informe uma senha correta.'}
-            </p>             */}
+            </p>*/}
         </div>
     )
 

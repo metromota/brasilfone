@@ -10,10 +10,12 @@ function NumberTel({values, errors, touched, disable}){
    
     let isErrorDDI = errors.ddi
     let isTouchedDDI = touched.ddi
+
+    let styleLabel = isInvalidTel ? 'label-error' : 'label-field'
     
     return(
         <div>
-            <label className={isInvalidTel ? 'label-error' : 'label-field'}>Número</label>
+            <label className={styleLabel}>Número</label>
             <div className='container-append'>  
 
                 <div className='box-item-append'>
