@@ -1,23 +1,31 @@
+import { useState } from "react"
 import {Field} from "formik"
 import {AiFillEye} from 'react-icons/ai'
 
 function PasswordFieldConfirm({values, errors, touched, disable}){
 
+    let [isHide, setHide] = useState(true)
+
     let isError = errors.passwordconfirm
     let isTouched = touched.passwordconfirm
     let isInvalid = isError && isTouched
+    let type = isHide ? 'password' : 'text'
+
+    let handleShowPassword = ()=> setHide(!isHide)
 
     return(
         <div className="box-field">
             <label className={isInvalid ? 'label-error' : 'label-field'}>Repetir Senha</label>
             <div className="field-append">
                 <Field
-                    type="password"
+                    type={type}
                     name="passwordconfirm"
                     className={isInvalid ? 'field-error' : 'field'}
                     disabled={disable}
                 />
-                <AiFillEye className="item-field-append-right" />
+                <AiFillEye 
+                className={isHide ? "item-field-append-right" : "item-field-append-right-show"} 
+                onClick={handleShowPassword} />
             </div>
             {/* <p className="alert-field-error">
                 { isError && isTouched &&  'Os campos de senha não são iguais.'}

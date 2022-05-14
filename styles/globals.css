@@ -73,6 +73,9 @@
 .item-field-append-right{
     @apply absolute top-[28%] right-[10px] w-[20px] h-[20px] text-sky-900 hover:text-sky-700 cursor-pointer ;
 }
+.item-field-append-right-show{
+    @apply absolute top-[28%] right-[10px] w-[20px] h-[20px] text-sky-700 hover:text-sky-900 cursor-pointer ;
+}
 .item-field-append-left{
     @apply absolute top-[28%] left-[10px] w-[20px] h-[20px] text-sky-900 hover:text-sky-700 cursor-pointer ;
 }
