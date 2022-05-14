@@ -9,4 +9,5 @@ function LeftSide(){
         </div> 
     )
 }
+
 export default LeftSide

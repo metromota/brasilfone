@@ -4,15 +4,17 @@ function UsernameField({values, errors, touched, disable}){
 
     let isError = errors.username
     let isTouched = touched.username
+    let styleLabel = isError ? 'label-error' : 'label-field'
+    let style = isError ? 'field-error' : 'field'
 
     return(
         <div className="box-field">
-            <label className={isError ? 'label-error' : 'label-field'}>Email ou Telefone</label>
+            <label className={styleLabel}>Email ou Telefone</label>
             <Field
-                type="text"
-                name="username"
-                className={isError ? 'field-error' : 'field'}
-                disabled={disable}
+            type="text"
+            name="username"
+            className={style}
+            disabled={disable}
             />
             {/* <p className="alert-field-error">
                 { isError && isTouched && 'Informe um número ou e-mail correto.'}
