@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <div className="container-app">
 
-            <div className="w-screen h-screen flex justify-center items-center">
+            <div className="homepage-buttons">
                 <Link href='/login'>
                     <button className="btn-default">Ir Login</button>
                 </Link>

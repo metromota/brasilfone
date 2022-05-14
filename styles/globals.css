@@ -8,12 +8,21 @@
     @apply w-full min-h-screen flex;
 }
 .leftside{
-    @apply hidden md:block w-[50%] bg-sky-700;
+    @apply hidden md:flex w-[50%] bg-[url('/assets/blue.png')] bg-center bg-no-repeat bg-cover relative flex justify-center items-center ;
 }
 .rightside{
-    @apply w-full md:w-[50%] bg-sky-800 md:bg-white flex justify-center items-center;
+    @apply w-full md:w-[50%] bg-[url('/assets/blue.png')] bg-center bg-no-repeat bg-cover md:bg-none flex justify-center items-center;
 }
 /* containers  */
+
+/* logomarca */
+.container-logomarca{
+    @apply absolute top-10 left-10;
+}
+.logomarca{
+    @apply w-full h-auto;
+}
+/* logomarca */
 
 /* card form auth */
 .card-form{
@@ -102,10 +111,10 @@
 
 /* selects  */
 .ddi{
-    @apply h-[60%] text-xs ;
+    @apply h-[60%] text-sm bg-transparent;
 }
 .ddi-error{
-    @apply h-[60%] text-xs text-red-500;
+    @apply h-[60%] text-sm text-red-500;
 }
 /* selects  */
 
@@ -118,3 +127,10 @@
     @apply mx-2 ;
 }
 /* radio  */
+
+
+/* homepage */
+.homepage-buttons{
+    @apply w-screen h-screen flex justify-center items-center ;
+}
+/* homepage */

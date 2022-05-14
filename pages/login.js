@@ -1,5 +1,5 @@
 import LoginCardForm from "../components/cards/logincardform";
-
+import Logomarca from "../components/logo/logomarca";
 
 export default function Home() {
 
@@ -7,6 +7,10 @@ export default function Home() {
         <div className="container-app">
 
             <div className="leftside">
+
+                <div className="container-logomarca">
+                    <Logomarca />
+                </div>
 
             </div> 
 
@@ -17,3 +21,4 @@ export default function Home() {
         </div>
     )
 }
+
