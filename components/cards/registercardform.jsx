@@ -7,6 +7,7 @@ import ErrorAlert from "../alerts/error";
 import EmailField from "../fields/email";
 import NumberTel from "../fields/numbertel";
 import Privacy from "../fields/privacy";
+import Newsletter from "../fields/newsletter";
 
 import register_schema from "../../schemas/register_schema";
 
@@ -18,7 +19,9 @@ function RegisterCardForm(){
         passwordconfirm:'',
         email:'',
         ddi:55,
-        tel:''
+        tel:'',
+        privacy:false,
+        newsletter:false,
     }
 
     let renderForm = ({values, errors, touched})=>(
@@ -29,6 +32,7 @@ function RegisterCardForm(){
             <PasswordField values={values} errors={errors} touched={touched} disable={false}/>
             <PasswordFieldConfirm values={values} errors={errors} touched={touched} disable={false}/>
             <Privacy />
+            <Newsletter />
             { 
                 (
                     errors.name && touched.name || 
