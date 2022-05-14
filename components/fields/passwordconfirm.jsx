@@ -1,30 +1,30 @@
 import {Field} from "formik"
 import {AiFillEye} from 'react-icons/ai'
 
-function PasswordField({values, errors, touched, disable}){
+function PasswordFieldConfirm({values, errors, touched, disable}){
 
-    let isError = errors.password
-    let isTouched = touched.password
+    let isError = errors.passwordconfirm
+    let isTouched = touched.passwordconfirm
     let isInvalid = isError && isTouched
 
     return(
         <div className="box-field">
-            <label className={isInvalid ? 'label-error' : 'label-field'}>Senha</label>
+            <label className={isInvalid ? 'label-error' : 'label-field'}>Repetir Senha</label>
             <div className="field-append">
                 <Field
                     type="password"
-                    name="password"
+                    name="passwordconfirm"
                     className={isInvalid ? 'field-error' : 'field'}
                     disabled={disable}
                 />
                 <AiFillEye className="item-field-append-right" />
             </div>
             {/* <p className="alert-field-error">
-                { isError && isTouched &&  'Informe uma senha correta.'}
+                { isError && isTouched &&  'Os campos de senha não são iguais.'}
             </p>             */}
         </div>
     )
 
 }
 
-export default PasswordField
+export default PasswordFieldConfirm

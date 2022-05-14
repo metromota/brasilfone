@@ -1,10 +1,12 @@
 import { Form, Formik } from "formik";
 import Submit from "../buttons/submit";
 import PasswordField from "../fields/password";
+import PasswordFieldConfirm from "../fields/passwordconfirm";
 import NameField from "../fields/name";
 import ErrorAlert from "../alerts/error";
 import EmailField from "../fields/email";
 import NumberTel from "../fields/numbertel";
+import Privacy from "../fields/privacy";
 
 import register_schema from "../../schemas/register_schema";
 
@@ -13,6 +15,7 @@ function RegisterCardForm(){
     let initialValueForm = {
         name:'',
         password:'',
+        passwordconfirm:'',
         email:'',
         ddi:55,
         tel:''
@@ -24,10 +27,16 @@ function RegisterCardForm(){
             <EmailField values={values} errors={errors} touched={touched} disable={false}/>
             <NumberTel values={values} errors={errors} touched={touched} disable={false}/>
             <PasswordField values={values} errors={errors} touched={touched} disable={false}/>
+            <PasswordFieldConfirm values={values} errors={errors} touched={touched} disable={false}/>
+            <Privacy />
             { 
                 (
-                    errors.name && touched.name || errors.email && touched.email || 
-                    errors.tel && touched.tel   || errors.ddi && touched.ddi
+                    errors.name && touched.name || 
+                    errors.email && touched.email || 
+                    errors.tel && touched.tel   || 
+                    errors.ddi && touched.ddi ||
+                    errors.password && touched.password || 
+                    errors.passwordconfirm && touched.passwordconfirm 
                 ) &&
                 <ErrorAlert message='Os campos em destaque estão incorretos, tente novamente'/>
             }

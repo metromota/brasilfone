@@ -1,6 +1,5 @@
 import { Field } from 'formik'
 
-
 function NumberField({values, errors, touched, disable}){
 
     let isError = errors.number
