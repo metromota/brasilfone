@@ -20,8 +20,8 @@ function RegisterCardForm(){
         email:'',
         ddi:55,
         tel:'',
-        privacy:false,
-        newsletter:false,
+        privacy:'',
+        newsletter:'Não',
     }
 
     let renderForm = ({values, errors, touched})=>(
@@ -31,8 +31,8 @@ function RegisterCardForm(){
             <NumberTel values={values} errors={errors} touched={touched} disable={false}/>
             <PasswordField values={values} errors={errors} touched={touched} disable={false}/>
             <PasswordFieldConfirm values={values} errors={errors} touched={touched} disable={false}/>
-            <Privacy />
-            <Newsletter />
+            <Privacy  values={values} errors={errors} touched={touched} disable={false}/>
+            <Newsletter values={values} errors={errors} touched={touched} disable={false}/>
             { 
                 (
                     errors.name && touched.name || 

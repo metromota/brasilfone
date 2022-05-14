@@ -12,13 +12,11 @@ function Newsletter({values, errors, touched, disable}){
             <div className='flex items-center justify-center'>
 
                <label>
-                <Field type='radio' className='radio' name='newsletter' checked={false} />
-                Sim                    
+                <Field type='radio' className='radio' name='newsletter' checked={values.newsletter === 'Sim'} value='Sim' /> Sim                    
                </label>
 
                <label>
-                <Field type='radio' className='radio' name='newsletter' checked={false} />
-                Não                    
+                <Field type='radio' className='radio' name='newsletter' checked={values.newsletter === 'Não'} value='Não'/> Não                    
                </label>
 
             </div>

@@ -114,4 +114,7 @@
 .radio{
     @apply mx-2 ;
 }
+.radio-error{
+    @apply mx-2 ;
+}
 /* radio  */
