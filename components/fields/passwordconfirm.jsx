@@ -30,9 +30,9 @@ function PasswordFieldConfirm({values, errors, touched, disable}){
                 className={styleEye} 
                 onClick={handleShowPassword} />
             </div>
-            {/* <p className="alert-field-error">
-                { isError && isTouched &&  'Os campos de senha não são iguais.'}
-            </p>*/}
+            <p className="alert-field-error">
+                { (isError && isTouched) &&  isError}
+            </p>
         </div>
     )
 

@@ -19,6 +19,7 @@ function ResetPasswordCardForm(){
 
     let renderForm = ({values, errors, touched})=>(
         <Form>
+            
             <EmailField values={values} errors={errors} touched={touched} disable={false} />
 
             { (!errors.email && touched.email) && (values.email) &&
@@ -30,9 +31,16 @@ function ResetPasswordCardForm(){
             }
 
             { 
-                (errors.email &&  touched.email) &&
+                (errors.email && touched.email) &&
                 <ErrorAlert message='O campo Email precisa estar correto, tente novamente'/>
             }
+
+            { 
+                (
+                    (!!(touched.password && errors.password)) || (!!(touched.passwordnew && errors.passwordnew)) || (!!(touched.passwordconfirm && errors.passwordconfirm))
+                ) &&
+                <ErrorAlert message='O campos precisam estar corretos, tente novamente'/>
+            } 
 
             <Submit value="Resetar" />
         </Form>
@@ -46,7 +54,9 @@ function ResetPasswordCardForm(){
             <Formik  
             initialValues={initialValueForm} 
             validationSchema={reset_schema}   
-            onSubmit={(values, actions)=>{ console.log(values) }}       
+            onSubmit={(values, actions)=>{ 
+                console.log(values)
+            }}       
             >
                 { renderForm }   
             </Formik> 

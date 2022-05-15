@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 /* containers  */
+.home{
+    @apply bg-[url('/assets/blue.png')] bg-center bg-no-repeat bg-cover ;
+}
 .container-app{
     @apply w-full min-h-screen flex;
 }
@@ -40,7 +43,7 @@
 
 /* card form auth */
 .card-form{
-    @apply bg-white shadow-md border rounded-xl w-[80%] md:w-[45%] p-4 lg:p-16;
+    @apply bg-white z-10 shadow-md border rounded-xl w-[80%] md:w-[45%] p-4 lg:p-16;
 }
 .card-form > h2{
     @apply font-bold bg-clip-text bg-gradient-to-br text-transparent from-sky-700 to-sky-900 text-center text-xl py-4;
@@ -67,7 +70,7 @@
 
 /* buttons  */
 .btn-default{
-    @apply mx-2 w-[150px] px-[16px] py-2 text-white text-center rounded-md bg-gradient-to-br from-slate-500 to-slate-900 font-medium shadow-md hover:from-slate-800;
+    @apply m-2 w-[150px] px-[16px] py-2 text-white text-center rounded-md bg-gradient-to-br from-slate-500 to-slate-900 font-medium shadow-md hover:from-slate-800;
 }
 .btn-primary{
     @apply w-[80%] mx-auto px-[16px] py-4 text-white text-center rounded-md bg-gradient-to-br from-sky-500 to-sky-900 font-medium shadow-md hover:from-sky-800;
@@ -145,7 +148,7 @@
 
 /* homepage */
 .homepage-buttons{
-    @apply w-screen h-screen flex justify-center items-center ;
+    @apply w-screen h-screen flex flex-col justify-center items-center ;
 }
 /* homepage */
 

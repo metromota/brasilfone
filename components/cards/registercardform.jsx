@@ -21,7 +21,7 @@ function RegisterCardForm(){
         ddi:55,
         tel:'',
         privacy:'',
-        newsletter:'Não',
+        newsletter:'',
     }
 
     let renderForm = ({values, errors, touched})=>(

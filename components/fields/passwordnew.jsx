@@ -30,9 +30,9 @@ function PasswordNewField({values, errors, touched, disable}){
                 className={styleEye}  
                 onClick={handleShowPassword} />
             </div>
-            {/* <p className="alert-field-error">
+            <p className="alert-field-error">
                 { isError && isTouched &&  'Informe uma senha correta.'}
-            </p>*/}
+            </p>
         </div>
     )
 

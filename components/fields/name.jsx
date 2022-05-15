@@ -17,9 +17,9 @@ function NameField({values, errors, touched, disable}){
             className={style}
             disabled={disable}
             />
-            {/* <p className="alert-field-error">
-                { isError && isTouched && 'Informe um número ou e-mail correto.'}
-            </p> */}
+            <p className="alert-field-error">
+                { isError && isTouched && 'Informe um nome de usuário correto.'}
+            </p>
         </div>
     )
 }

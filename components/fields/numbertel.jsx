@@ -26,12 +26,12 @@ function NumberTel({values, errors, touched, disable}){
                 <Tel  values={values} errors={errors} touched={touched} disable={false}/>
 
             </div>
-            {/* <p className="alert-field-error">
+            <p className="alert-field-error">
                 { isErrorTel && isTouchedTel && 'Informe um número correto.'}
-            </p> */}
-            {/* <p className="alert-field-error">
-            { isErrorDDI && isTouchedDDI && 'Informe um DDI correto.'}
-            </p> */}
+            </p>
+            <p className="alert-field-error">
+                { isErrorDDI && isTouchedDDI && 'Informe um DDI correto.'}
+            </p>
         </div>
     )
 }

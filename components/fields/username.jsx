@@ -16,9 +16,9 @@ function UsernameField({values, errors, touched, disable}){
             className={style}
             disabled={disable}
             />
-            {/* <p className="alert-field-error">
+            <p className="alert-field-error">
                 { isError && isTouched && 'Informe um número ou e-mail correto.'}
-            </p> */}
+            </p>
         </div>
     )
     
