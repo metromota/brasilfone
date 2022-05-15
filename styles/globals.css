@@ -31,7 +31,7 @@
     @apply absolute top-10 left-10;
 }
 .container-mobile-logomarca{
-    @apply md:hidden absolute top-[10px] w-full left-0 flex justify-center;
+    @apply md:hidden absolute top-[10px] w-[30%] left-[35%] flex justify-center;
 }
 .logomarca{
     @apply mx-auto w-full h-auto;

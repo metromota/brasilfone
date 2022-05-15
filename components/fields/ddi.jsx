@@ -10,7 +10,7 @@ function DDIField({values, errors, touched, disable}){
     ]
 
     return(
-        <div className="">
+        <div className="mx-2">
             <Field 
             as="select"
             name='ddi'

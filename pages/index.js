@@ -12,6 +12,9 @@ export default function Home() {
                 <Link href='/register'>
                     <button className="btn-default">Ir Cadastro</button>
                 </Link>
+                <Link href='/reset'>
+                    <button className="btn-default">Ir Reset</button>
+                </Link>
             </div>
 
         </div>

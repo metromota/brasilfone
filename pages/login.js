@@ -1,6 +1,6 @@
 import LoginCardForm from "../components/cards/logincardform";
+import LogomarcaMobile from "../components/logo/logomarcaMobile";
 import LeftSide from "../components/sides/leftside";
-import Logomarca from "../components/logo/logomarca";
 
 export default function Home() {
 
@@ -10,9 +10,7 @@ export default function Home() {
             <LeftSide />
 
             <div className="rightside">
-                <div className="container-mobile-logomarca">
-                    <Logomarca />
-                </div>
+                <LogomarcaMobile />                
                 <LoginCardForm />               
             </div>          
         

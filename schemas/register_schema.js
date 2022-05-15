@@ -7,8 +7,8 @@ let register_schema = Yup.object().shape({
     email: Yup.string().min(5).max(100).email().required('O Campo não foi inserido, digite e tente novamente.'),
     ddi: Yup.string().required('O Campo não foi inserido, digite e tente novamente.'),
     tel: Yup.string().matches(/^\d{9,11}$/).required('O Campo não foi inserido, digite e tente novamente.'),
-    privacy:Yup.string().required('Aceite os termos de uso para continuar, obrigado!'),
-    newsletter:Yup.string().required('Aceite os termos de uso para continuar, obrigado!')
+    privacy:Yup.boolean().required('Aceite os termos de uso para continuar, obrigado!'),
+    newsletter:Yup.boolean().required('Aceite os termos de uso para continuar, obrigado!')
 })
 
 export default register_schema

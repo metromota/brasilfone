@@ -14,11 +14,11 @@ function Newsletter({values, errors, touched, disable}){
 
             <div className='center-content'>
 
-               <label>
+               <label className='mx-2'>
                 <Field type='radio' className='radio' name='newsletter' checked={isYes} value='Sim' /> Sim                    
                </label>
 
-               <label>
+               <label className='mx-2'>
                 <Field type='radio' className='radio' name='newsletter' checked={isNot} value='Não'/> Não                    
                </label>
 
